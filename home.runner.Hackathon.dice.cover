@@ -1,0 +1,160 @@
+    1: import random
+       #x= 'y'
+       
+       
+    1: def dice():
+    1:   import random
+       
+    1:   print("\nWelcome to dice game!")
+    1:   print("\n-Brought to you by WALL-3")
+    2:   print("\n   _______", "\n  /\ o o o\ ", '\n /o \ o o o\_______',
+    1:         '\n<    >------>   o /|', '\n \ o/  o   /_____/o|',
+    1:         '\n  \/______/     |oo|', '\n        |   o   |o/',
+    1:         '\n        |_______|/')
+         #art by R. Shawn Butler
+         #https://www.asciiart.eu/miscellaneous/dice
+         #enter to roll
+       
+         #ask for player names and store
+    1:   name1 = input("\nWhat is player 1's name: ")
+    1:   name2 = input("\nWhat is player 2's name: ")
+       
+         #ask person to press enter to roll again
+    1:   input("\n" + name1.capitalize() + " press enter to roll!")
+       
+         #roll
+    1:   name1Score = random.randint(1, 6)
+       
+         #if statments for player 1
+    1:   if name1Score == 1:
+           print(
+             "\n┌─────────┐",
+             "\n│         │",
+             "\n│    ●    │",
+             "\n│         │",
+             "\n└─────────┘",
+           )
+           print("\n", name1.capitalize(), "you rolled a 1!")
+    1:   elif name1Score == 2:
+           print(
+             "\n┌─────────┐",
+             "\n│  ●      │",
+             "\n│         │",
+             "\n│      ●  │",
+             "\n└─────────┘",
+           )
+           print("\n", name1.capitalize(), "you rolled a 2!")
+    1:   elif name1Score == 3:
+    2:     print(
+    1:       "\n┌─────────┐",
+    1:       "\n│  ●      │",
+    1:       "\n│    ●    │",
+    1:       "\n│      ●  │",
+    1:       "\n└─────────┘",
+           )
+    1:     print("\n", name1.capitalize(), "you rolled a 3!")
+         elif name1Score == 4:
+           print(
+             "\n┌─────────┐",
+             "\n│  ●   ●  │",
+             "\n│         │",
+             "\n│  ●   ●  │",
+             "\n└─────────┘",
+           )
+           print("\n", name1.capitalize(), "you rolled a 4!")
+         elif name1Score == 5:
+           print("\n┌─────────┐", "\n│  ●   ●  │", "\n│    ●    │", "\n│  ●   ●  │",
+                 "\n└─────────┘")
+           print("\n", name1.capitalize(), "you rolled a 5!")
+       
+         else:
+           print(
+             "\n┌─────────┐",
+             "\n│  ●   ●  │",
+             "\n│  ●   ●  │",
+             "\n│  ●   ●  │",
+             "\n└─────────┘",
+           )
+           print("\n", name1.capitalize(), "you rolled a 6!")
+       
+         #ask to preess enter to roll
+    1:   input("\n" + name2.capitalize() + " press enter to roll!")
+       
+         #roll player 2
+    1:   name2Score = random.randint(1, 6)
+       
+         #if for player 2
+    1:   if name2Score == 1:
+           print(
+             "\n┌─────────┐",
+             "\n│         │",
+             "\n│    ●    │",
+             "\n│         │",
+             "\n└─────────┘",
+           )
+           print("\n", name2, "you rolled a 1!")
+    1:   elif name2Score == 2:
+           print(
+             "\n┌─────────┐",
+             "\n│  ●      │",
+             "\n│         │",
+             "\n│      ●  │",
+             "\n└─────────┘",
+           )
+           print("\n", name2, "you rolled a 2!")
+    1:   elif name2Score == 3:
+    2:     print(
+    1:       "\n┌─────────┐",
+    1:       "\n│  ●      │",
+    1:       "\n│    ●    │",
+    1:       "\n│      ●  │",
+    1:       "\n└─────────┘",
+           )
+    1:     print("\n", name2, "you rolled a 3!")
+         elif name2Score == 4:
+           print(
+             "\n┌─────────┐",
+             "\n│  ●   ●  │",
+             "\n│         │",
+             "\n│  ●   ●  │",
+             "\n└─────────┘",
+           )
+           print("\n", name2, "you rolled a 4!")
+         elif name2Score == 5:
+           print("\n┌─────────┐", 
+                 "\n│  ●   ●  │",
+                 "\n│    ●    │", 
+                 "\n│  ●   ●  │",
+                 "\n└─────────┘")
+           print("\n", name2, "you rolled a 5!")
+       
+         else:
+           print(
+             "\n┌─────────┐",
+             "\n│  ●   ●  │",
+             "\n│  ●   ●  │",
+             "\n│  ●   ●  │",
+             "\n└─────────┘",)
+           print("\n", name2, "you rolled a 6!")
+       
+         #define score variables
+    1:   score1 = 0
+    1:   score2 = 0
+       
+         #decide who wins
+    1:   if name1Score > name2Score:
+           print("\n" + name1.capitalize(), "you win!")
+           score1 += 1
+    1:   elif name2Score > name1Score:
+           print("\n" + name2.capitalize(), "you win!")
+           score2 += 1
+           # name1Score == name2Score
+         else:
+    1:     print("\nIt's a tie!")
+       
+         #display scores
+    1:   print(score1)
+    1:   print(score2)
+       
+       
+    1: dice()

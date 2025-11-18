@@ -1,0 +1,87 @@
+#all 25%
+#2 player dice game that asks for player names and then replays with a selcetion
+import sys
+import os
+import time
+
+#welcome message
+print("Welcome to Group 3 walls Game")
+
+#define while loop variable
+x = 'y'
+
+
+#run program class
+def run():
+
+  #waits to clear screen
+  time.sleep(5)
+  #clears screen
+  os.system('clear')
+
+  #print and retrive option
+  print("\nSelect one option below")
+  start = input('1. Dice\n2. Magic 8 ball\n3. exit\n')
+
+  #ifs
+  if start.lower() == '1':
+    exec(open("dice.py").read())
+  elif start.lower() == '2':
+    exec(open("magic8ball.py").read())
+  elif start.lower() == '3':
+    print("Goodbye")
+    sys.exit()
+
+  
+
+#ends class
+run()
+
+#runs class while varible is true
+while x == 'y':
+  run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+while True:
+
+  start = input("\nEnter 1 for dice, 2 for magic 8 ball : ")
+
+  if start == "1":
+    import dice
+    print(dice)
+    break
+
+  elif start == "2":
+    import make8ball
+    print(make8ball)
+    break
+
+  #if start == "3":
+  #print("Goodbye")
+  #break
+
+#ask what game you want to play
+
+#play == input("press enter to play again")
+#while (play = ""):
+'''
+
